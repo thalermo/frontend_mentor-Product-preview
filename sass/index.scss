@@ -1,0 +1,8 @@
+/*SIMPLE STRUCTURE
+The simple structure is convenient for a small project like a single web page. For that purpose, you need to create a very minimal structure. Here is an example:*/
+
+/*_main.sass — the main partial should contain only the imports of the already mentioned files*/
+
+@forward './base';
+@forward './components';
+@forward './layout';

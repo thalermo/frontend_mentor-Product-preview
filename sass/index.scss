@@ -4,6 +4,6 @@ The simple structure is convenient for a small project like a single web page. F
 /*_main.sass — the main partial should contain only the imports of the already mentioned files*/
 
 @forward './reset';
-@forward './base';
+@forward './card';
 @forward './components';
 @forward './layout';

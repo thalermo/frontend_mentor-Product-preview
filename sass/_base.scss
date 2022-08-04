@@ -22,3 +22,15 @@ $fw-bold: 700;
 
 /*******--Font Size-- *******/
 $fs-400: 1.4rem;
+$fs-500: 1.6rem;
+$fs-600: 2rem;
+$fs-800: 2.5rem;
+$fs-900: 3rem;
+
+/**** --MIXINS-- ****/
+@mixin background-img($url-img) {
+  background-image: url($url-img);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

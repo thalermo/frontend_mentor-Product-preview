@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* Box sizing rules */
+* {
+  font-size: 10px;
+}
+* ::before,
+* ::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  * ::before,
+* ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* _base.sass — contains all the resets, variables, mixins, and utility classes
+*/
+/* variables*/
+/*------colors---------*/
+/*------Typography---------*/
+/*******--Font Family-- *******/
+/*******--Font Weight-- *******/
+/*******--Font Size-- *******/
+/**** --MIXINS-- ****/
+body {
+  background-color: hsl(30deg, 38%, 92%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 90%;
+  height: 85vh;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+}
+.card__img {
+  background-image: url("../images/image-product-desktop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 35vh;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1rem auto;
+  width: 70%;
+  height: 60%;
+}
+.card__category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  color: hsl(228deg, 12%, 48%);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.card__title {
+  font-size: 3.5rem;
+  font-family: "Fraunces", sans-serif;
+  line-height: 1.2;
+}
+.card__desc {
+  font-size: 1.6rem;
+  color: hsl(228deg, 12%, 48%);
+  line-height: 1.6;
+}
+.card__price {
+  font-size: 3.5rem;
+  color: hsl(158deg, 36%, 37%);
+  font-family: "Fraunces", sans-serif;
+}
+.card__price--discount {
+  color: hsl(228deg, 12%, 48%);
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: line-through;
+}
+.card__btn--primary {
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-radius: 0.8rem;
+  padding-block: 1.3rem;
+  font-size: 1.6rem;
+}
+.card__btn--icon {
+  margin-inline-end: 1rem;
+}
+
+@media (min-width: 860px) {
+  * {
+    font-size: 11px;
+    transition: ease all 0.1s;
+  }
+  .card {
+    width: 80vw;
+    height: 60vh;
+    flex-direction: row;
+    border-radius: 1rem;
+  }
+  .card__content {
+    width: 30rem;
+    height: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+  }
+  .card__img {
+    height: 100%;
+    width: 50%;
+    border-radius: 1rem 0 0 1rem;
+    background-size: 100%;
+  }
+}
+/*_components.sass — everything that is reusable – buttons, navbars, cards, and so on
+*/
+/*_layout.sass — all the Sass code handling the layout, which is the container and grid systems
+*/
+/*SIMPLE STRUCTURE
+The simple structure is convenient for a small project like a single web page. For that purpose, you need to create a very minimal structure. Here is an example:*/
+/*_main.sass — the main partial should contain only the imports of the already mentioned files*/
+
+/*# sourceMappingURL=style.css.map */

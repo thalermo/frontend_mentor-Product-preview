@@ -134,12 +134,12 @@ I would like to continue maximizing the Sass use in the project by manufacturing
 
 ### Useful resources
 
-- [responsiveness ](https://www.youtube.com/watch?v=0ohtVzCSHqs&t=2s) - This helped me for the responsiveness in the website. I really recommend in general about Kevin Powell's content.
+- [Responsiveness ](https://www.youtube.com/watch?v=0ohtVzCSHqs&t=2s) - This helped me for the responsiveness in the website. I really recommend in general about Kevin Powell's content.
 - [@use vs. @import](https://www.youtube.com/watch?v=CR-a8upNjJ0&t=635s) - This is an amazing explanation that helped me to understand the difference between @import and @use. I'd recommend it to anyone who's still learning this concept.
 
 - [SVG tutorial](https://www.freecodecamp.org/news/use-svg-images-in-css-html/#:~:text=SVG%20images%20can%20be%20written,element%20in%20your%20HTML%20document.&text=body%3E-,If%20you%20did%20everything%20correctly%2C%20your%20webpage%20should,exactly%20like%20the%20demo%20below.) - This is a useful tutorial which helped me to implement the SVG Image in my CSS & HTML.
--
-- [hover parent & child](https://stackoverflow.com/questions/14792574/css-child-set-to-change-color-on-parent-hover-but-changes-also-when-hovered) - This is a useful explanation which helped me to implement the css changes of the child by hovering on parent.
+
+- [Hover parent & child](https://stackoverflow.com/questions/14792574/css-child-set-to-change-color-on-parent-hover-but-changes-also-when-hovered) - This is a useful explanation which helped me to implement the css changes of the child by hovering on parent.
 
 ## Author
 

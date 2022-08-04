@@ -177,7 +177,7 @@ body {
     height: 100%;
     width: 50%;
     border-radius: 1rem 0 0 1rem;
-    background-size: 100%;
+    background-size: cover;
   }
 }
 /*_components.sass — everything that is reusable – buttons, navbars, cards, and so on

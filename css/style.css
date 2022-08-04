@@ -152,14 +152,24 @@ body {
   padding-block: 1.3rem;
   font-size: 1.6rem;
 }
-.card__btn--icon {
+.card__btn--primary:hover {
+  color: hsl(158deg, 36%, 37%);
+  background-color: hsl(0deg, 0%, 100%);
+  border: 1px solid hsl(158deg, 36%, 37%);
+  cursor: pointer;
+}
+.card__btn--primary:hover .card__icon--svg {
+  fill: hsl(158deg, 36%, 37%);
+}
+.card .card__icon--svg {
+  fill: hsl(0deg, 0%, 100%);
   margin-inline-end: 1rem;
 }
 
 @media (min-width: 860px) {
   * {
     font-size: 11px;
-    transition: ease all 0.1s;
+    transition: ease all 0.2s;
   }
   .card {
     width: 80vw;

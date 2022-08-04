@@ -1,22 +1,23 @@
 # Frontend Mentor - Product preview card component solution
 
-This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Product preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa).
+
+Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+- [Frontend Mentor - Product preview card component solution](#frontend-mentor---product-preview-card-component-solution)
+  - [Table of contents](#table-of-contents)
+  - [Overview](#overview)
+    - [The challenge](#the-challenge)
+    - [Screenshot](#screenshot)
+    - [Links](#links)
+  - [My process](#my-process)
+    - [Built with](#built-with)
+    - [What I learned](#what-i-learned)
+    - [Continued development](#continued-development)
+    - [Useful resources](#useful-resources)
+  - [Author](#author)
 
 ## Overview
 
@@ -29,15 +30,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop version:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./images/Screenshot_desktop_version.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+Mobile version:
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot_mobile_version.png)
 
 ### Links
 
@@ -46,66 +45,103 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
+<br/>
+
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- CSS Flexbox
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Sass](https://sass-lang.com/) - Sass library
+- [BEM-methodology](http://getbem.com/)
+
+<br/>
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- How to implement Sass in the project:
 
-To see how you can add code snippets, see below:
+  - adding a JSON file, and writing the script compiler.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+  ```
+  "scripts": { "compile:sass": "sass sass/index.scss css/style.css -w" }
+  ```
+
+  - using the rules @use & @forward instead of @import for better css efficiency
+
+  ```
+  @forward './card';
+  @use './base' as b;
+  ```
+
+  - How to maximize the efficiency of the workflow by using variables & mixin
+
+  ```
+  $clr-primary-400: hsl(158, 36%, 37%);
+  $clr-primary-300: hsl(30, 38%, 92%);
+
+  @mixin background-img($url-img) {
+    background-image: url($url-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  ```
+
+- How to structure the HTML based on the BEM methodology
+- How to implement SVG files in HTML by using and change the color of the icon by using the fill attribute.
+
 ```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  .btn--primary {
+    background-color: b.$clr-primary-400;
+    color: b.$clr-natural-100;
+
+// hover on the btn
+
+    &:hover {
+      color: b.$clr-primary-400;
+      background-color: b.$clr-natural-100;
+
+// hover on the parent change the child
+
+      .card__icon--svg {
+        fill: b.$clr-primary-400;
+      }
+    }
+  }
+
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+_This syntax was necessary in order avoid resizing of the icon and still be able to change the fill attribute to the primary color_
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Button before hovering:
+
+![](./images/Screenshot_btn-hover.png)
+
+Button by hovering:
+
+![](./images/screenshot_btn-primary.png)
+
+- How to make a responsive card
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I would like to continue maximizing the Sass use in the project by manufacturing the code by:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+1. creating extends & more mixins
+2. importing code blocks to the \_layout.scss & \_components.scss and manufacturing the scss code
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Example resource 1](https://www.youtube.com/watch?v=0ohtVzCSHqs&t=2s) - This helped me for the responsiveness reason. I really recommend in general about Kevin Powell's content.
+- [Example resource 2](https://www.youtube.com/watch?v=CR-a8upNjJ0&t=635s) - This is an amazing explanation that helped me to understand the difference between @import and @use. I'd recommend it to anyone who's still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [Example resource 3](https://www.freecodecamp.org/news/use-svg-images-in-css-html/#:~:text=SVG%20images%20can%20be%20written,element%20in%20your%20HTML%20document.&text=body%3E-,If%20you%20did%20everything%20correctly%2C%20your%20webpage%20should,exactly%20like%20the%20demo%20below.) - This is a useful tutorial which helped me to implement the SVG Image in my CSS & HTML.
+-
+- [Example resource 4](https://stackoverflow.com/questions/14792574/css-child-set-to-change-color-on-parent-hover-but-changes-also-when-hovered) - This is a useful explanation which helped me to implement the css changes of the child by hovering on parent.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@thaler_mo](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@dev_thaler](https://www.twitter.com/dev_thaler)

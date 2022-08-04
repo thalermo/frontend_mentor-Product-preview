@@ -86,9 +86,21 @@ body {
     padding-block: 1.3rem;
 
     font-size: b.$fs-500;
+
+    &:hover {
+      color: b.$clr-primary-400;
+      background-color: b.$clr-natural-100;
+      border: 1px solid b.$clr-primary-400;
+      cursor: pointer;
+
+      .card__icon--svg {
+        fill: b.$clr-primary-400;
+      }
+    }
   }
 
-  &__btn--icon {
+  .card__icon--svg {
+    fill: b.$clr-natural-100;
     margin-inline-end: 1rem;
   }
 }
@@ -96,7 +108,7 @@ body {
 @media (min-width: 860px) {
   * {
     font-size: 11px;
-    transition: ease all 0.1s;
+    transition: ease all 0.2s;
   }
 
   .card {

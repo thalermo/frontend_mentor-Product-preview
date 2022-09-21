@@ -39,8 +39,8 @@ Mobile version:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [click to review the solution](https://www.frontendmentor.io/solutions/responsive-product-preview-card-using-html-sass-and-bemmethodology-5o2Ewu-oV9)
+- Live Site URL: [click to check the live site](https://frontendmentor1challenge.netlify.app/)
 
 ## My process
 
